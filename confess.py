@@ -5,7 +5,7 @@ import time
 num_port = 17           # numero du port sur lequel est le bouton
 num_port_led = 14       # numero de port de la LED
 temps = 60              # temps d'enregistrement en secondes
-chemin = "/media/usb1/" # repertoire de stockage des fichiers sons
+chemin = "/media/pi/USB1/" # repertoire de stockage des fichiers sons
 fichier = "confess"     # nom du fichier
 
 
