@@ -30,10 +30,13 @@ créer une clé usb en FAT32 et ka nommer USB1
  5/ configurer l'autolaunch du script python 'confess.py'
  
  >crontab -e
+ 
  choisir editeur nano
+ 
  rajouter la ligne suivante à la fin
+ 
  @reboot sudo python /chemin/du/dossier/confess.py &
-  puis faire ctrl+o [entrée] ctrl+x [entrée]
+ puis faire ctrl+o [entrée] ctrl+x [entrée]
   
   6/ redémarrer
   
