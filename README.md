@@ -29,7 +29,7 @@ créer une clé usb en FAT32 et ka nommer USB1
  
  5/ configurer l'autolaunch du script python 'confess.py'
  
- >crontab -e
+ > crontab -e
  
  choisir editeur nano
  
@@ -45,5 +45,35 @@ créer une clé usb en FAT32 et ka nommer USB1
   7/ récupération des confessions audio
   
   Il faut systématiquement éteindre ou débrancher le raspi pour enlever la clé usb.
+  
+  
+  
+  8/ Utiliser la boite à confession sans écran
+  
+
+> sudo raspi-config
+boot option
+dans b1 desktop/CLI 
+cocher b2 console autologin
+
+puis faire 
+> sudo mkdir /media/pi/USB1
+> sudo chmod 777 /media/pi/USB1
+
+Dans le crontab rajouter les lignes suivantes au dessus de la ligne lançant python
+@reboot sudo umount -a
+@reboot sudo mount /dev/sda1 /medi/pi/USB1
+
+puis faire ctrl+o [entrée] ctrl+x [entrée]
+
+
+
+
+9/ pour une maintenance 
+
+> sudo raspi-config
+boot option
+dans b1 desktop/CLI 
+puis cocher b4 desktop autologin
   
   
