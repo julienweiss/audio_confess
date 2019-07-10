@@ -36,6 +36,7 @@ créer une clé usb en FAT32 et ka nommer USB1
  rajouter la ligne suivante à la fin
  
  @reboot sudo python /chemin/du/dossier/confess.py &
+ 
  puis faire ctrl+o [entrée] ctrl+x [entrée]
   
   6/ redémarrer
@@ -61,8 +62,11 @@ puis faire
 > sudo chmod 777 /media/pi/USB1
 
 Dans le crontab rajouter les lignes suivantes au dessus de la ligne lançant python
+
 @reboot sudo umount -a
+
 @reboot sudo mount /dev/sda1 /medi/pi/USB1
+
 
 puis faire ctrl+o [entrée] ctrl+x [entrée]
 
